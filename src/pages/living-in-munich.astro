@@ -1,20 +1,31 @@
 ---
-// import Container from "../components/container.astro";
-// import ImageCard from "../components/image-card.astro";
-// import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+import ImageCard from "../components/image-card.astro";
+import Layout from "../layouts/Layout.astro";
 
-// const images = [
-//     '../public/hiking/alpsee.jpeg',
-//     '../public/hiking/cloudy_zugspitze.jpeg',
-//     '../public/hiking/steps_before_summit.jpeg'
-// ];
+const kramer_summit = [
+    '../public/hiking/route.jpeg',
+    '../public/hiking/cloudy_zugspitze.jpeg',
+    '../public/hiking/field_bg_zugspitze.jpeg',
+    '../public/hiking/steps_before_summit.jpeg',
+];
 
+const schwangau = [
+    '',
+    '../public/hiking/neuschwanstein.jpeg',
+    '../public/hiking/alpsee.jpeg',
+]
 ---
 
-work in progress
-
-<!-- <Layout title="living in munich">
+<Layout title="Living in Munich">
     <Container>
-        <ImageCard images={images}></ImageCard>
+        <div class="flex flex-wrap gap-8">
+            <ImageCard images={kramer_summit} title="Kramerspitz" href="/">
+                this is the summary this is the summary this is the summary this is the summary this is the summary this is the summary
+            </ImageCard>
+            <ImageCard images={schwangau} title="Schwangau (Castle Neuschwanstein)">
+                this is the summary this is the summary this is the summary this is the summary this is the summary this is the summary
+            </ImageCard>
+        </div>
     </Container>
-</Layout> -->
+</Layout>

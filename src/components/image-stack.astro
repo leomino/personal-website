@@ -1,0 +1,18 @@
+---
+export interface Props {
+	images: Array<string>;
+}
+
+const { images } = Astro.props;
+let classes = [
+    'absolute left-2 md:left-4 top-2 md:top-4 drop-shadow-lg', 
+    'absolute drop-shadow-lg -left-2 md:-left-4 top-4 md:top-5', 
+    'drop-shadow-lg'
+];
+---
+
+<div class="mb-5 w-full flex justify-center p-4">
+    <div class="relative">
+        {images.map((src, i) => <img src={src} alt="404" class={classes[i%3]}/>)}
+    </div>
+</div>
