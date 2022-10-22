@@ -1,20 +1,40 @@
 ---
 import Container from "../components/container.astro";
 import ImageCard from "../components/image-card.astro";
+import ImgCardCategory from "../components/img-card-category.astro";
 import Layout from "../layouts/Layout.astro";
+
+const zugspitze = [
+    '../hiking/summit_eibsee.jpeg',
+    '../hiking/field_bg_zugspitze.jpeg',
+    '../hiking/cloudy_zugspitze_bright.jpeg',
+];
 
 const kramer_summit = [
     '../hiking/route.jpeg',
-    '../hiking/cloudy_zugspitze.jpeg',
+    '../hiking/cloudy_zugspitze_bright.jpeg',
     '../hiking/field_bg_zugspitze.jpeg',
     '../hiking/steps_before_summit.jpeg',
 ];
 
 const schwangau = [
+    '../hiking/alpsee.jpeg',
     '../hiking/field_bg_zugspitze.jpeg',
     '../hiking/neuschwanstein.jpeg',
-    '../hiking/alpsee.jpeg',
-]
+];
+
+const munich = [
+    '../munich/_.jpeg',
+    '../munich/gasteig.jpeg',
+    '../munich/monopterus.jpeg',
+];
+
+const architecture = [
+    '../munich/altbau_front.jpeg',
+    '../munich/architecture.jpeg',
+    '../munich/haus_der_kunst.jpeg',
+];
+
 ---
 
 <Layout title="Living in Munich">
@@ -27,14 +47,25 @@ const schwangau = [
                     <div>MUNICH</div>
                 </div>
             </div>
-            <div class="flex flex-wrap gap-8 md:pt-14 pt-10">
-                <ImageCard images={kramer_summit} title="Kramerspitz" href="/">
+            <ImgCardCategory title="Living in Munich">
+                <ImageCard images={munich} title="Landmarks">
+                    this is the summary this is the summary this is the summary this is the summary this is the summary
+                </ImageCard>
+                <ImageCard images={architecture} title="Architecture">
+                    this is the summary this is the summary this is the summary this is the summary this is the summary this is the summary
+                </ImageCard>
+            </ImgCardCategory>
+            <ImgCardCategory title="Nearby Mountains">
+                <ImageCard images={kramer_summit} title="Kramerspitz">
+                    this is the summary this is the summary this is the summary this is the summary this is the summary this is the summary
+                </ImageCard>
+                <ImageCard images={zugspitze} title="Zugspitze (Highest Mountain, 2962m)">
                     this is the summary this is the summary this is the summary this is the summary this is the summary this is the summary
                 </ImageCard>
                 <ImageCard images={schwangau} title="Schwangau (Castle Neuschwanstein)">
                     this is the summary this is the summary this is the summary this is the summary this is the summary this is the summary
                 </ImageCard>
-            </div>
+            </ImgCardCategory>
         </div>
     </Container>
 </Layout>
