@@ -18,22 +18,28 @@ const kramer_summit = [
 ];
 
 const schwangau = [
-    '../hiking/alpsee.jpeg',
     '../hiking/field_bg_zugspitze.jpeg',
+    '../hiking/alpsee.jpeg',
     '../hiking/neuschwanstein.jpeg',
 ];
 
-const munich = [
-    '../munich/_.jpeg',
-    '../munich/monopterus.jpeg',
-    '../munich/gasteig.jpeg',
+const mittenwald = [
+    '../hiking/cloudy_mittenwald.jpeg',
+    '../hiking/tree_bg_mountain.jpeg',
+    '../hiking/mittenwald_summit.JPG',
 ];
 
-const architecture = [
-    '../munich/altbau_front.jpeg',
-    '../munich/architecture.jpeg',
-    '../munich/haus_der_kunst.jpeg',
-];
+// const munich = [
+//     '../munich/_.jpeg',
+//     '../munich/monopterus.jpeg',
+//     '../munich/gasteig.jpeg',
+// ];
+
+// const architecture = [
+//     '../munich/altbau_front.jpeg',
+//     '../munich/architecture.jpeg',
+//     '../munich/haus_der_kunst.jpeg',
+// ];
 
 ---
 
@@ -47,23 +53,34 @@ const architecture = [
                     <div>MUNICH</div>
                 </div>
             </div>
-            <ImgCardCategory title="Living in Munich">
+            <!-- <ImgCardCategory title="Living in Munich">
                 <ImageCard images={munich} title="Landmarks">
                     this is the summary this is the summary this is the summary this is the summary this is the summary
                 </ImageCard>
                 <ImageCard images={architecture} title="Architecture">
                     this is the summary this is the summary this is the summary this is the summary this is the summary this is the summary
                 </ImageCard>
-            </ImgCardCategory>
+            </ImgCardCategory> -->
             <ImgCardCategory title="Nearby Mountains">
-                <ImageCard images={kramer_summit} title="Kramerspitz">
-                    this is the summary this is the summary this is the summary this is the summary this is the summary this is the summary
+                <ImageCard images={kramer_summit} title="Kramerspitz (1985m)">
+                    A very beautiful route where you can see germanys highest mountain on one side of the view and on the other side the amazing landscape of the allgäuer alps.
+                    Close to the top you will hear a lot of the typical cowbells which is very peaceful and on the way down you will encounter many free held cute sheeps.
+                    It took us 6h to get to the summit and (including the way down) we went a total of almost 20 kilometers.
                 </ImageCard>
                 <ImageCard images={zugspitze} title="Zugspitze (Highest Mountain, 2962m)">
-                    this is the summary this is the summary this is the summary this is the summary this is the summary this is the summary
+                    I never went the route to zugspitze, which takes more than one day to get to the summit, although it is on my todo-list.
+                    But I was there one time with my class in highschool. We obviously went the easy and fast way up, with the cable-car. The view from the summit is undescribable. 
+                    It was a winters day and at about 3/4 the way up, the clouds became so tight, that you couldn't see more than 1m ahead. 
+                    It literally looked like we were in heaven. Which at 2962m arguably may be true ;)
                 </ImageCard>
                 <ImageCard images={schwangau} title="Schwangau (Castle Neuschwanstein)">
-                    this is the summary this is the summary this is the summary this is the summary this is the summary this is the summary
+                    Seeing the castle neuschwanstein is a must. You cannot possibly seen any disney movie without ever seeing the real castle which disney used for inspiration. 
+                    The castle is truly an amazing architecture located above a small short hiking path. The whole time I wondered how hard it must have been for the people to build the castle there.
+                    Nearby is a very beautiful small lake called alpsee. It's definetly worth checking out too. Also I drank one of the most delicious beers in a wirtshaus located at that lake.
+                </ImageCard>
+                <ImageCard images={mittenwald} title="Mittenwald">
+                    Mittenwald is a very beautiful small town with very special house designs. It feels as if the town didn't change very much since medival times. With the huge mountain views in the background
+                    it is located in a very beautiful landscape. Hiking up the mountains leads to an amazing easy path with breathtaking views.
                 </ImageCard>
             </ImgCardCategory>
         </div>
