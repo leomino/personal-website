@@ -1,5 +1,5 @@
 ---
-import ImageStack from "./image-stack.astro";
+import ImageStack from './ImageStack';
 
 export interface Props {
 	images: Array<string>;
@@ -12,7 +12,7 @@ const { images, title, href } = Astro.props;
 ---
 
 <a class="flex flex-col md:w-[22rem]" href={href}>
-    <ImageStack images={images}></ImageStack>
+    <ImageStack images={images} client:visible></ImageStack>
     <p class="font-semibold">{title}</p>
     <p class="text-slate-700 w-full">
         <slot/>
