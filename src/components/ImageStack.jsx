@@ -10,7 +10,7 @@ const ImageStack = (props /* images: string[] */) => {
 
   const prev = () => {
     const next = index-1;
-    setIndex(next>=0?next:2);
+    setIndex(next>=0?next:props.images.length-1);
   }
 
   const next = () => {
