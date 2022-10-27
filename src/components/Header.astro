@@ -1,8 +1,8 @@
 ---
-import Header from "./Header";
+import MobileHeader from "./MobileHeader";
 
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname;
+const currentPath = pathname.replaceAll("/", "");
 ---
 
 <div class="hidden md:block py-1 border-b-2 border-dotted text-slate-800 text-sm">
@@ -10,13 +10,13 @@ const currentPath = pathname;
         <span>Hey there 👋, welcome to my personal website</span>
 
         <div>
-            <a href="/" class={currentPath === "/" ? "underline decoration-2 font-semibold" : "underline"} title="Home">Home</a>
-            <a href="/living-in-munich" class={currentPath === "/living-in-munich" ? "underline decoration-2 font-semibold" : "underline"} title="Photos">Photos</a>
+            <a href="/" class={currentPath === "" ? "underline decoration-2 font-semibold" : "underline"} title="Home">Home</a>
+            <a href="/living-in-munich" class={currentPath === "living-in-munich" ? "underline decoration-2 font-semibold" : "underline"} title="Photos">Photos</a>
         </div>
 
     </div>
 </div>
 
 <div class="md:hidden">
-    <Header client:media="(max-width: 768px)"></Header>
+    <MobileHeader client:media="(max-width: 768px)" currentPath={currentPath}></MobileHeader>
 </div>

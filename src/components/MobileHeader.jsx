@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Header = () => {
+const MobileHeader = (props /*currentPath: string*/) => {
     const [show, setShow] = useState(false);
 
     return (
@@ -27,11 +27,11 @@ const Header = () => {
             </svg>
 
             <div className="flex flex-col gap-2">
-                <a href="/" className={"underline decoration-2 font-semibold"} title="Home">Home</a>
-                <a href="/living-in-munich" className={"underline"} title="Photos">Photos</a>
+                <a href="/" className={props.currentPath === "" ? "underline decoration-2 font-semibold" : "underline"} title="Home">Home</a>
+                <a href="/living-in-munich" className={props.currentPath === "living-in-munich" ? "underline decoration-2 font-semibold" : "underline"} title="Photos">Photos</a>
             </div>
         </div>
     )
 }
 
-export default Header;
+export default MobileHeader;
