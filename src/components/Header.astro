@@ -1,5 +1,22 @@
-<div class="py-1 border-b-2 border-dotted">
-    <span class="max-w-screen-md m-auto block px-4 pb-1">Hey there 👋, welcome to my 
-        <a href="/" class="font-semibold">personal website</a>
-    </span>
+---
+import Header from "./Header";
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname;
+---
+
+<div class="hidden md:block py-1 border-b-2 border-dotted text-slate-800 text-sm">
+    <div class="max-w-screen-md m-auto flex justify-between px-4 pb-1">
+        <span>Hey there 👋, welcome to my personal website</span>
+
+        <div>
+            <a href="/" class={currentPath === "/" ? "underline decoration-2 font-semibold" : "underline"} title="Home">Home</a>
+            <a href="/living-in-munich" class={currentPath === "/living-in-munich" ? "underline decoration-2 font-semibold" : "underline"} title="Photos">Photos</a>
+        </div>
+
+    </div>
+</div>
+
+<div class="md:hidden">
+    <Header client:media="(max-width: 768px)"></Header>
 </div>
