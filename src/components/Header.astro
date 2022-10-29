@@ -10,8 +10,8 @@ const currentPath = pathname.replaceAll("/", "");
         <span>Hey there 👋, welcome to my personal website</span>
 
         <div class="hidden md:block">
-            <a href="/" class={currentPath === "" ? "underline decoration-2 font-semibold" : "underline"} title="About">About</a>
-            <a href="/living-in-munich" class={currentPath === "living-in-munich" ? "underline decoration-2 font-semibold" : "underline"} title="Photos">Photos</a>
+            <a href="/" class={currentPath === "" ? "font-semibold" : ""} title="About">About</a>
+            <a href="/living-in-munich" class={currentPath === "living-in-munich" ? "font-semibold" : ""} title="Photos">Photos</a>
         </div>
         
         <div class="md:hidden">
