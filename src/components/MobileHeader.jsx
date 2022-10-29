@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+/**
+ * Designed for mobile devices with small screens. Hamburger menu icon, opens a menu covering the entire screen when clicked.
+ * The menu contains a list of clickable links, placed on the bottom right corner, to be reached easy on mobile devices.
+ */
 const MobileHeader = (props /*currentPath: string*/) => {
     const [show, setShow] = useState(false);
 
@@ -23,10 +27,10 @@ const MobileHeader = (props /*currentPath: string*/) => {
 
                 <ul>
                     <li className="mb-2">
-                        <a href="/" className={props.currentPath === "" ? "underline decoration-2 font-semibold" : "underline"} title="About">About</a>
+                        <a href="/" className={props.currentPath === "" ? "font-semibold" : ""} title="About">About</a>
                     </li>
                     <li>
-                        <a href="/living-in-munich" className={props.currentPath === "living-in-munich" ? "underline decoration-2 font-semibold" : "underline"} title="Photos">Photos</a>
+                        <a href="/living-in-munich" className={props.currentPath === "living-in-munich" ? "font-semibold" : ""} title="Photos">Photos</a>
                     </li>
                 </ul>
             </div> : null}
