@@ -52,7 +52,7 @@ const ImageStack = (props /* images: string[] */) => {
         </div>
 
         
-        {props.images.map((src, i) => <AdvancedImage key={i} cldImg={cld.image(`personal-website/${src}`).resize(fill().width(320).height(240)).delivery(quality(90))} className={classes[i%3] + (i === index ? ' z-10' : ' brightness-90 z-[-1]')}/>)}
+        {props.images.map((src, i) => <AdvancedImage key={i} cldImg={cld.image(`personal-website/${src}`).resize(fill().width(320).height(240)).delivery(quality(100))} className={classes[i%3] + (i === index ? ' z-10' : ' brightness-90 z-[-1]')}/>)}
       </div>
     </div>
   );
