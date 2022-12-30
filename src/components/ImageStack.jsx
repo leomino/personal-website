@@ -1,4 +1,14 @@
 import React, { useState } from "react";
+import {AdvancedImage} from '@cloudinary/react';
+import {fill} from "@cloudinary/url-gen/actions/resize";
+import {quality} from "@cloudinary/url-gen/actions/delivery";
+import {Cloudinary} from "@cloudinary/url-gen";
+
+const cld = new Cloudinary({
+	cloud: {
+		cloudName: 'flat-map'
+	}
+});
 
 /**
  * Stacks images in three shifted layers centered together in one element.
@@ -42,7 +52,7 @@ const ImageStack = (props /* images: string[] */) => {
         </div>
 
         
-        {props.images.map((src, i) => <img key={i} src={src} alt="404" className={classes[i%3] + (i === index ? ' z-10' : ' brightness-90 z-[-1]')}/>)}
+        {props.images.map((src, i) => <AdvancedImage key={i} cldImg={cld.image(`personal-website/${src}`).resize(fill().width(320).height(240)).delivery(quality(90))} className={classes[i%3] + (i === index ? ' z-10' : ' brightness-90 z-[-1]')}/>)}
       </div>
     </div>
   );
